@@ -4,12 +4,14 @@ from constants import LINE_WIDTH
 from constants import PLAYER_TURN_SPEED
 from constants import PLAYER_SPEED
 from constants import PLAYER_SHOOT_SPEED
+from constants import PLAYER_SHOOT_COOLDOWN_SECONDS
 from shot import Shot
 
 class Player(CircleShape):
     def __init__(self, x, y, radius):
         super().__init__(x, y, radius)
         self.rotation = 0
+        self.shot_cooldown_timer = 0
     
     def triangle(self):
         forward = pygame.Vector2(0, 1).rotate(self.rotation)
@@ -31,10 +33,18 @@ class Player(CircleShape):
         self.position += rotated_vector * PLAYER_SPEED * dt
 
     def shoot(self):
+        # If the current value of the timer is greater than 0, prevent the player from
+        # shooting.
+        if(self.shot_cooldown_timer > 0):
+            return
+        else:
+            self.shot_cooldown_timer = PLAYER_SHOOT_COOLDOWN_SECONDS
+
         shot = Shot(self.position.x, self.position.y)
         shot.velocity = pygame.Vector2(0,1).rotate(self.rotation) * PLAYER_SHOOT_SPEED
 
     def update(self, dt):
+        self.shot_cooldown_timer -= dt
         keys = pygame.key.get_pressed()
 
         if keys[pygame.K_a]:

@@ -6,3 +6,6 @@ PLAYER_RADIUS = 20
 LINE_WIDTH = 2
 # Player Movement
 PLAYER_TURN_SPEED = 300
+
+# Combat
+SHOT_RADIUS = 5

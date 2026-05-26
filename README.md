@@ -4,7 +4,7 @@ A classic Asteroids arcade game built with Python and Pygame — with a Weyland-
 
 ## Gameplay
 
-![CRT Asteroids gameplay](IMG/CRT_Asteroids.mov)
+![CRT Asteroids gameplay](IMG/asteroids_crt.mov)
 
 ## Features
 
@@ -17,7 +17,7 @@ A classic Asteroids arcade game built with Python and Pygame — with a Weyland-
 
 Early prototype — basic shooting and rotation:
 
-![Early prototype](IMG/Asteroids.mov)
+![Early prototype](IMG/asteroids_pt.mov)
 
 ## Project Structure
 asteroids/

@@ -1,22 +1,25 @@
 # Asteroids
 
-A classic Asteroids arcade game built with Python and Pygame.
+A classic Asteroids arcade game built with Python and Pygame — with a Weyland-Yutani CRT aesthetic.
 
-![Asteroids gameplay](IMG/asteroids_shoot_rotate.gif)
+## Gameplay
+
+![CRT Asteroids gameplay](IMG/CRT_Asteroids.mov)
 
 ## Features
 
-- Player ship with rotation and movement
-- Asteroids that spawn and drift across the screen
+- Chunky irregular asteroids that split on hit
+- Phosphor-green CRT overlay with scanlines and vignette
+- Score tracker styled after Alien terminal displays
 - Shooting mechanic with cooldown timer
-- Collision detection between player, shots, and asteroids
-- Game over on player-asteroid collision
 
-![Asteroids split](IMG/Asteroids.mov)
+## Progress
+
+Early prototype — basic shooting and rotation:
+
+![Early prototype](IMG/Asteroids.mov)
 
 ## Project Structure
-
-```
 asteroids/
 ├── main.py           # Entry point and game loop
 ├── constants.py      # Game configuration values
@@ -25,23 +28,23 @@ asteroids/
 ├── asteroid.py       # Asteroid logic and splitting
 ├── asteroidfield.py  # Asteroid spawning
 ├── shot.py           # Projectile logic
+├── explosion.py      # Particle explosion system
+├── crt.py            # CRT scanline and vignette overlay
 ├── logger.py         # State and event logging
 └── IMG/
-    └── asteroids_shoot_rotate.gif
-```
+    ├── CRT_Asteroids.mov
+    └── Asteroids.mov
 
 ## Requirements
 
 - Python 3.x
 - Pygame
 
-Install dependencies:
-
 ```bash
 pip install pygame
 ```
 
-## Running the Game
+## Running
 
 ```bash
 python main.py

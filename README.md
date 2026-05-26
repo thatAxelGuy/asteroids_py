@@ -12,6 +12,8 @@ A classic Asteroids arcade game built with Python and Pygame.
 - Collision detection between player, shots, and asteroids
 - Game over on player-asteroid collision
 
+![Asteroids split](IMG/Asteroids.mov)
+
 ## Project Structure
 
 ```

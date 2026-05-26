@@ -3,8 +3,7 @@
 A classic Asteroids arcade game built with Python and Pygame — with a Weyland-Yutani CRT aesthetic.
 
 ## Gameplay
-
-![CRT Asteroids gameplay](IMG/asteroids_crt.mov)
+![CRT Asteroids Visuals](IMG/asteroids_crt.mov)
 
 ## Features
 

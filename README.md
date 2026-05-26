@@ -19,6 +19,7 @@ Early prototype — basic shooting and rotation:
 ![Early prototype](IMG/asteroids_pt.mov)
 
 ## Project Structure
+```
 asteroids/
 ├── main.py           # Entry point and game loop
 ├── constants.py      # Game configuration values
@@ -31,8 +32,9 @@ asteroids/
 ├── crt.py            # CRT scanline and vignette overlay
 ├── logger.py         # State and event logging
 └── IMG/
-    ├── CRT_Asteroids.mov
-    └── Asteroids.mov
+    ├── asteroids_crt.mov
+    └── asteroids_pt.mov
+```
 
 ## Requirements
 

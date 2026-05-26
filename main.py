@@ -7,6 +7,7 @@ from player import Player
 from asteroid import Asteroid
 from asteroidfield import AsteroidField
 from shot import Shot
+from crt import make_crt_overlay
 
 # ── Score Renderer ────────────────────────────────────────────────
 def make_score_font(size=26):
@@ -57,6 +58,7 @@ def main():
     screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
     score = 0
     score_font = make_score_font(26)
+    crt_overlay = make_crt_overlay(SCREEN_WIDTH, SCREEN_HEIGHT)
     
     updatable = pygame.sprite.Group()
     drawable = pygame.sprite.Group()
@@ -95,7 +97,9 @@ def main():
         for d in drawable:
             d.draw(screen)
         
-        draw_score(screen, score_font, score)
+        screen.blit(crt_overlay, (0, 0)) # draw CRT always on top
+        
+        draw_score(screen, score_font, score) # draw score on top without CRT
         pygame.display.flip()
         dt = clock.tick(60) / 1000
         
